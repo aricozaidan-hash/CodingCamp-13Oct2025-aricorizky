@@ -17,16 +17,16 @@ function addTask() {
         tasksDb.push(newTask);
 
         console.log(tasksDb);
-        renderTasks();
+        
     }
 };
 
 function renderTasks() {
-    const tasksList = document.getElementById('taskslist');
-    tasksList.innerHTML = '';
+    /// Clear Existing List
+    const taskList = document.getElementById('tasklist');
+    taskList.innerHTML = '';
 
     tasksDb.forEach((taskObj, index) => {
-        const taskItem = document.createElement('div');
         tasksList.innerHTML += `li ${taskObj.task} - ${taskObj.date} <button onclick="deleteTask(${index})">Delete</button></li>`;
 
         
@@ -36,7 +36,12 @@ function renderTasks() {
 
 
 
-function deleteTask() {
+function deleteAllTasks() {
+    /// Clear Database
+    tasksDb = [];
+
+    /// Render
+    renderTasks();
 
 }
 
