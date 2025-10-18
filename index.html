@@ -15,35 +15,35 @@
 
 <body>
 
-    <!-- Header Section -->
+    <!-- Header  -->
     <header>
-        <h1 class="text-3xl font-bold">My Todo List</h1>
+        <h1 class="text-3xl font-bold">Todo List</h1>
     </header>
 
-    <!-- Main Content Section -->
+    <!-- Main -->
     <main>
         <section class="todo-app my-4">
             <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add a new task..." />
             <input type="date" class="border rounded p-2" id="todo-date" placeholder="Select due date..." />
-            <button class="bg-blue-500 text-white rounded p-2" onclick="addTask();">Add</button>
+            <button class="bg-blue-500 text-black rounded p-2" onclick="addTask();">+</button>
         </section>
 
-        <!-- Action Buttons Section -->
+        <!-- Action Buttons  -->
         <section class="flex justify-between my-4">
             <button class="bg-gray-300 rounded p-2" id="filter-btn">Filter</button>
             <button class="bg-red-500 text-white rounded p-2" onclick="deleteAllTasks();">Delete All Tasks</button>
         </section>
 
         <section class="my-4">
-            <h2 class="text-2xl">List of Tasks</h2>
+            <h2 class="text-2xl">Tasks List</h2>
             <ul id="task-list">
-                <!-- Tasks will be dynamically added here -->
+                
                 <li>No tasks added</li>
             </ul>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer  -->
     <footer>
         <p class="text-sm">&copy; 2025 Arico Todo List</p>
     </footer>
