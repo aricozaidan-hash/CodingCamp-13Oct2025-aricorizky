@@ -40,8 +40,12 @@ function deleteAllTasks() {
 
 
 function filterTasks() {
-    
+    tasksDb = [];
+
+    renderTasks();
 }
+    
+
 
 
 function validateInput(task, date) {
