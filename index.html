@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List - arico</title>
+    <title>Todo List - Arico</title>
 
-    <!--css Eksternal File-->
-    <link rel="stylesheet" href="css\style.css">
+    <!-- CSS External File -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Css tailwind inspect-->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <h1 class="text-3xl font-bold"> To Do List</h1>
-    <!-- Main  -->
+        <h1 class="text-3xl font-bold">My Todo List</h1>
+    </header>
+
+    <!-- Main Content Section -->
     <main>
-        <div class="todo-app my-4">
-            <input type="text" class="border rounded p-2" id="todo-Input" placeholder="Add a new task...">
-            <input type="date" class="border rounded p-2" id="todo-date" placeholder="Add a date...">
-            <button class="bg-blue-500 text-blue rounded p-2" onclick="addTask();">+</button> 
-            <ul id="taskList"></ul>
-        </div>
-
+        <section class="todo-app my-4">
+            <input type="text" class="border rounded p-2" id="todo-input" placeholder="Add a new task..." />
+            <input type="date" class="border rounded p-2" id="todo-date" placeholder="Select due date..." />
+            <button class="bg-blue-500 text-white rounded p-2" onclick="addTask();">Add</button>
         </section>
 
-
-        <!--Action button section-->
+        <!-- Action Buttons Section -->
         <section class="flex justify-between my-4">
-            <button class="bg-gray-400 rounded p-2" id="filter">Filter </button>
-            <button class="bg-red-700 rounded text-white p-2" onclick="deleteAllTasks()">Delete All</button>
-
-            
-
-        </section>
-            <h2 class="font-bold my-[8px]">List of Tasks</h2>
-            <ul id="taskList"></ul>
-            <!--task akan dinamakan disini -->
-             <li id="taskList">belum ada</li>
+            <button class="bg-gray-300 rounded p-2" id="filter-btn">Filter</button>
+            <button class="bg-red-500 text-white rounded p-2" onclick="deleteAllTasks();">Delete All Tasks</button>
         </section>
 
-    <!-- Footer -->
+        <section class="my-4">
+            <h2 class="text-2xl">List of Tasks</h2>
+            <ul id="task-list">
+                <!-- Tasks will be dynamically added here -->
+                <li>No tasks added</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p class="text-sm text center">&copy; Created by Arico 2025</p>
-    
+        <p class="text-sm">&copy; 2025 Arico Todo List</p>
+    </footer>
 
-
-        <!-- Javascript External File-->
-         <script src="js\script.js"></script>
+    <!-- Javascript External File -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>

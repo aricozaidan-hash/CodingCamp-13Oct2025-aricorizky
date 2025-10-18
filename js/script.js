@@ -1,63 +1,57 @@
-
-
+/// Database Simulation
 let tasksDb = [];
 
+/// Add Functionality
 function addTask() {
-    const taskInput = document.getElementById('todo-Input');
+    /// Get Input Values
+    const taskInput = document.getElementById('todo-input');
     const taskDate = document.getElementById('todo-date');
 
-    console.log(taskInput.value);
-    console.log(taskDate.value);
-    
+    /// Validate Input
     if (validateInput(taskInput.value, taskDate.value)) {
+        /// Create Task Object
         const newTask = {
             task: taskInput.value,
             date: taskDate.value,
-        };
+        }
+
+        /// Add to database
         tasksDb.push(newTask);
 
-        console.log(tasksDb);
-        
+        /// Render
+        renderTasks();
     }
-};
+}
 
+/// Render Functionality
 function renderTasks() {
     /// Clear Existing List
-    const taskList = document.getElementById('tasklist');
+    const taskList = document.getElementById('task-list');
     taskList.innerHTML = '';
 
+    /// Render Each Task
     tasksDb.forEach((taskObj, index) => {
-        tasksList.innerHTML += `li ${taskObj.task} - ${taskObj.date} <button onclick="deleteTask(${index})">Delete</button></li>`;
-
-        
+        taskList.innerHTML += `<li>${taskObj.task} - ${taskObj.date}</li>`;
     });
 }
 
-
-
-
+/// Delete All Functionality
 function deleteAllTasks() {
     /// Clear Database
     tasksDb = [];
 
     /// Render
     renderTasks();
-
 }
 
-function filterTasks() {
+/// Filter Functionality (Placeholder)
+function filterTasks() { }
 
-}
-
-
+/// Input Validation
 function validateInput(task, date) {
-    if (task.trim() === '') {
-        alert('Task cannot be empty');
-        return false;
-    }
-
-    if (date.trim() === '') {
-        alert('Date cannot be empty');
+    /// Simple Validation
+    if (task.trim() === '' || date.trim() === '') {
+        alert('Please enter both task and due date.');
         return false;
     }
     return true;
